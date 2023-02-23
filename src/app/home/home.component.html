@@ -1,0 +1,15 @@
+
+<p>Bonjour {{ username }} ! </p>
+<p>Votre Score est  : {{ score }}</p>
+
+<button (click)="logout()"> Sign out</button>
+
+<div class="next-button-container" style="text-align: center;">
+    <ul id="otis">
+
+     <span *ngFor='let item of questions;let index = index' > 
+        <li  class="padded" ><button id="{{ item._id }}"   (click)="goToQ(item._id,item.time)" >Question {{ index + 1 }}  </button> <br></li></span>  
+        
+    </ul>
+    
+</div>

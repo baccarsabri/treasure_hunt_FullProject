@@ -1,0 +1,66 @@
+<div class="game-quiz-container" style="text-align: center">
+
+    <div class="game-details-container">
+        <h1>Score : <span id="player-score"></span> / {{points}}</h1>
+        <h1> Time : <span id="time"></span  > <p>{{timeLeft}} Seconds Left....</p></h1>
+    </div>
+
+    <div class="game-question-container">
+        <h1 id="display-question">  {{ label }}</h1><p>?</p>
+        <span *ngIf="im.length>0">  <img width="100" [src]="im"></span>
+      
+    </div>
+
+    <div class="game-options-container">
+
+       <div class="modal-container" id="option-modal">
+
+            <div class="modal-content-container">
+                 <h1>Please Pick An Option</h1>
+
+                 <div class="modal-button-container">
+                    <button onclick="closeOptionModal()">Continue</button>
+                </div>
+
+            </div>
+
+       </div>
+
+        <span>
+            <input type="radio" id="option-one" name="option" class="radio" value="{{ r1 }}"  
+            (change)="onItemChange($event)"/>
+            <label for="option-one" class="option" id="option-one-label">{{ r1 }}</label>
+        </span>
+
+
+        <span>
+            <input type="radio" id="option-two" name="option" class="radio" value="{{ r2 }}" 
+            (change)="onItemChange($event)" />
+            <label for="option-two" class="option" id="option-two-label">{{ r2 }}</label>
+        </span>
+
+
+        <span>
+            <input type="radio" id="option-three" name="option" class="radio" value="{{ r3 }}" 
+            (change)="onItemChange($event)"  />
+            <label for="option-three" class="option" id="option-three-label">{{ r3 }}</label>
+        </span>
+
+
+        <span>
+            <input type="radio" id="option-four" name="option" class="radio" value="{{ r4 }}" 
+            (change)="onItemChange($event)"/>
+            <label for="option-four" class="option" id="option-four-label">{{ r4 }}</label>
+        </span>
+
+
+    </div>
+
+    <div class="next-button-container">
+        <button (click)="submit()"> Valider</button>
+    </div>
+
+</div>
+
+
+

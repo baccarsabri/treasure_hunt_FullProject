@@ -1,0 +1,29 @@
+.next-button-container button{
+    
+    width: 20rem;
+    height: 3rem;
+    border-radius: 10px;
+    background: none;
+    color: rgb(25, 25, 25);
+    font-weight: 600;
+    border: 2px solid gray;
+    cursor: pointer;
+    outline: none;
+}
+
+
+#otis li {
+    list-style-type: none;
+}
+
+li {
+
+    margin: 0 2px 0 0;
+   
+}
+
+.padded {
+    padding-top: 20px;
+   
+    
+}
